@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h1>Data Dashboard</h1>
+
+    <table class="table table-bordered mt-4">
+        <thead>
+        <tr>
+            <th>Intensity</th>
+            <th>Likelihood</th>
+            <th>Relevance</th>
+            <th>Year</th>
+            <th>Country</th>
+            <th>Topics</th>
+            <th>Region</th>
+            <th>City</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="data : ${dataList}">
+            <td th:text="${data.intensity}"></td>
+            <td th:text="${data.likelihood}"></td>
+            <td th:text="${data.relevance}"></td>
+            <td th:text="${data.year}"></td>
+            <td th:text="${data.country}"></td>
+            <td th:text="${data.topics}"></td>
+            <td th:text="${data.region}"></td>
+            <td th:text="${data.city}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+        .dashboard {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        .dashboard h1 {
+            text-align: center;
+        }
+        .data-form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .data-display {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .data-display table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .data-display table, th, td {
+            border: 1px solid #ddd;
+        }
+        .data-display th, .data-display td {
+            padding: 10px;
+            text-align: left;
+        }
+        .data-display th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="dashboard">
+    <h1>Data Visualization Dashboard</h1>
+
+    <!-- Form Section -->
+    <div class="data-form">
+        <h2>Enter Data</h2>
+        <form action="/submitData" method="post">
+            <div class="form-group">
+                <label for="intensity">Intensity:</label>
+                <input type="text" id="intensity" name="intensity" required>
+            </div>
+            <div class="form-group">
+                <label for="likelihood">Likelihood:</label>
+                <input type="text" id="likelihood" name="likelihood" required>
+            </div>
+            <div class="form-group">
+                <label for="relevance">Relevance:</label>
+                <input type="text" id="relevance" name="relevance" required>
+            </div>
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+            <div class="form-group">
+                <label for="topics">Topics:</label>
+                <input type="text" id="topics" name="topics" required>
+            </div>
+            <div class="form-group">
+                <label for="region">Region:</label>
+                <input type="text" id="region" name="region" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <!-- Data Display Section -->
+    <div class="data-display">
+        <h2>Recent Data</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Intensity</th>
+                <th>Likelihood</th>
+                <th>Relevance</th>
+                <th>Year</th>
+                <th>Country</th>
+                <th>Topics</th>
+                <th>Region</th>
+                <th>City</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- This section should ideally be populated dynamically with data from your application -->
+            <!-- Replace with Thymeleaf or JavaScript/React rendering based on your application architecture -->
+            <tr>
+                <td>Sample Intensity</td>
+                <td>Sample Likelihood</td>
+                <td>Sample Relevance</td>
+                <td>2024</td>
+                <td>Sample Country</td>
+                <td>Sample Topics</td>
+                <td>Sample Region</td>
+                <td>Sample City</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
